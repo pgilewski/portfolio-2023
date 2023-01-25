@@ -1,0 +1,76 @@
+.mediumShadow {
+  -webkit-box-shadow: 10px 10px 0px 0px rgba(0, 0, 0, 1);
+  -moz-box-shadow: 10px 10px 0px 0px rgba(0, 0, 0, 1);
+  box-shadow: 10px 10px 0px 0px rgba(0, 0, 0, 1);
+}
+/* linear-gradient(-206deg, #835EFF 0%, #FF008D 100%); */
+html {
+  background: conic-gradient(
+    at right bottom,
+    rgb(16, 118, 69),
+    rgb(63, 3, 124)
+  );
+  height: 100vh;
+}
+body {
+  height: 100vh;
+  width: 100vw;
+}
+.image {
+  display: block;
+  margin: 0 auto;
+}
+
+.image[press='1'] {
+  animation: press 1s 1;
+}
+
+@keyframes press {
+  50% {
+    transform: rotate(15deg);
+  }
+  100% {
+    transform: rotate(-30deg);
+  }
+}
+
+.transition-up {
+  /* transition: all 0.5s linear;
+  position: relative;
+  top: 0px;
+  left: 0px;
+  -webkit-transition: all 0.5s linear;
+  -moz-transition: all 0.5s linear;
+  -o-transition: all 0.5s linear;
+  -ms-transition: all 0.5s linear;
+  transition: all 0.5s linear; */
+  transition: transform 1s;
+  transition-duration: 1000ms;
+}
+
+.transition-up:hover {
+  /* transition: all 0.5s linear;
+  position: relative;
+  top: 10px;
+  left: 0px;
+  transition: transform 0.5s; */
+
+  transform: translateY(-10px);
+}
+.transition-up:active {
+  transform: translateY(10px);
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.experience {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+}
+.experience-canvas {
+  width: 100%;
+  height: 100%;
+}
