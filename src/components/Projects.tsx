@@ -55,13 +55,13 @@ const Projects = (props: any) => {
       >
         <SwiperSlide>
           {' '}
-          <ItemContainer link="#">
+          <ItemContainer link="https://github.com/pgilewski/ST0R4GE">
             Store images with AWS Rekognition
           </ItemContainer>
         </SwiperSlide>
         <SwiperSlide>
           {' '}
-          <ItemContainer link="#">
+          <ItemContainer link="https://github.com/pgilewski/baza">
             Small app to roll entires within groups.
           </ItemContainer>
         </SwiperSlide>
