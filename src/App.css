@@ -5,13 +5,8 @@
 }
 /* linear-gradient(-206deg, #835EFF 0%, #FF008D 100%); */
 html {
-  background: conic-gradient(
-    at right bottom,
-    rgb(16, 118, 69),
-    rgb(63, 3, 124)
-  );
-  height: 100vh;
 }
+
 body {
   height: 100vh;
   width: 100vw;

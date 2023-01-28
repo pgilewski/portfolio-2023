@@ -7,12 +7,11 @@ function CustomLink({ children, to, ...props }: LinkProps) {
   let match = useMatch({ path: resolved.pathname, end: true });
 
   return (
-    // <div style={{ color: match ? '#577AB2' : '#d6d6d6' }} >
     <div
       className={
         match
-          ? 'text-transparent bg-clip-text bg-gradient-to-tr from-cyan-400 to-sky-600 transition-colors'
-          : ''
+          ? 'px-3 py-1 text-transparent bg-clip-text bg-gradient-to-tr from-sky-400 to-sky-600 transition-all shadow-lg border border-black/'
+          : 'px-3 py-1'
       }
     >
       <Link to={to} {...props}>
@@ -26,12 +25,12 @@ function CustomLink({ children, to, ...props }: LinkProps) {
 const Navbar = () => {
   return (
     <div className="w-full bg-navyDark px-8 py-6 shadow-strong text-lg2">
-      <div className="w-full md:px-32  flex flex-row  justify-center m-auto font-semibold md:text-lg">
+      <div className="w-full md:px-32  flex flex-row  justify-center m-auto font-semibold md:text-lg lg:text-xl">
         <div className="flex flex-row grow-0 whitespace-nowrap   ">
-          <CustomLink to="/" className="mx-2 ">
+          <CustomLink to="/" className=" ">
             about me
           </CustomLink>
-          <CustomLink to="projects" className="mx-2 ">
+          <CustomLink to="projects" className=" ">
             my projects
           </CustomLink>
         </div>
@@ -40,7 +39,7 @@ const Navbar = () => {
             to="contact"
             className="flex flex-row items-center align-middle"
           >
-            <div className="mx-2">contact</div>
+            <div className="">contact</div>
           </CustomLink>
         </div>
         <div className="flex grow-0">
@@ -48,13 +47,13 @@ const Navbar = () => {
             to="calculator"
             className="flex flex-row items-center align-middle"
           >
-            <div className="mx-2">my services</div>
+            <div className="">my services</div>
           </CustomLink>
           <CustomLink
             to="resources"
             className="flex flex-row items-center align-middle"
           >
-            <div className="mx-2">resources</div>
+            <div className="">resources</div>
           </CustomLink>
         </div>
       </div>

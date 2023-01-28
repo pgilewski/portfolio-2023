@@ -69,8 +69,8 @@ const Contact = () => {
   };
 
   return (
-    <div>
-      <div className="flex bg-white/10 shadow-lg rounded-xl flex-row text-center shadow-strong m-auto justify-evenly items-center center md:max-w-screen-md w-full bg-navyDark mt-6 font-mono text-md pt-6">
+    <div className="h-screen">
+      <div className=" flex bg-white/10 shadow-lg rounded-xl flex-row text-center shadow-strong m-auto justify-evenly items-center center md:max-w-screen-md w-full bg-navyDark mt-6 font-mono text-md pt-6">
         <a href="https://www.linkedin.com/in/przemyslaw-gilewski/">
           <LinkedIn className="w-16 h-16 ml-4" />
         </a>
@@ -85,7 +85,9 @@ const Contact = () => {
         </a>
       </div>
       <div className="bg-white/10 shadow-lg rounded-xl text-center shadow-strong m-auto justify-center items-center center md:max-w-screen-md w-full bg-navyDark mt-6 font-mono text-md p-8">
-        <div className="text-xl mb-4 font-semibold">Write me a message</div>
+        <div className="text-xl mb-4 font-semibold">
+          Write me a message
+        </div>
         {!loading ? (
           <div>
             <div>

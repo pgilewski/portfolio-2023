@@ -1,0 +1,17 @@
+{
+  "projectName": "portfolio2023",
+  "version": "3.1",
+  "frontend": "javascript",
+  "javascript": {
+    "framework": "react",
+    "config": {
+      "SourceDir": "src",
+      "DistributionDir": "dist",
+      "BuildCommand": "tsc && vite build",
+      "StartCommand": "vite"
+    }
+  },
+  "providers": [
+    "awscloudformation"
+  ]
+}

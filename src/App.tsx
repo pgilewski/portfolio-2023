@@ -14,6 +14,7 @@ import 'swiper/css';
 import 'swiper/css/pagination';
 import 'swiper/css/navigation';
 import { Calculator } from './components/Calculator';
+import { Resources } from './components/Resources';
 
 const App: React.FC = () => {
   const [modal, setModal] = useState(false);
@@ -23,7 +24,8 @@ const App: React.FC = () => {
       setModal(false);
     }
   };
-  const [colorOptionsShown, setColorOptionsShown] = useState<boolean>(false);
+  const [colorOptionsShown, setColorOptionsShown] =
+    useState<boolean>(false);
 
   const toggleColorOptions = () => {
     console.log(colorOptionsShown);
@@ -50,6 +52,7 @@ const App: React.FC = () => {
             />
             <Route path="contact" element={<Contact />} />
             <Route path="calculator" element={<Calculator />} />
+            <Route path="resources" element={<Resources />} />
           </Routes>
         </BrowserRouter>
       </div>
