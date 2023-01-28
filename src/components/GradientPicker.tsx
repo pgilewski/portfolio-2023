@@ -9,11 +9,11 @@ type HandleProps = {
 };
 
 export const GradientPicker = ({ display }: ComponentProps) => {
-  const [color, setColor] = useState<string>('#342a65');
+  const [color, setColor] = useState<string>('#c067c8');
 
   const [colors, setColors] = useState<any>([
-    '#453985',
     '#c067c8',
+    '#453985',
     '#3a4ac6',
     '#185eea',
     '#3e2a7e',
@@ -34,26 +34,54 @@ export const GradientPicker = ({ display }: ComponentProps) => {
   useEffect(() => {
     console.log(color);
     if (color === '#453985') {
-      document.body.style.background =
-        'conic-gradient(at right bottom,rgb(16, 118, 69),rgb(63, 3, 124))';
+      document
+        .querySelector('#root')
+        ?.setAttribute(
+          'style',
+          'background: conic-gradient(at right bottom,rgb(16, 118, 69),rgb(63, 3, 124))'
+        );
     } else if (color === '#c067c8') {
-      document.body.style.background =
-        'linear-gradient(-206deg, #835EFF 0%, #f844a7 100%)';
+      document
+        .querySelector('#root')
+        ?.setAttribute(
+          'style',
+          'background: linear-gradient(-206deg, #835EFF 0%, #f844a7 100%)'
+        );
     } else if (color === '#3a4ac6') {
-      document.body.style.background =
-        'conic-gradient(at right bottom, rgb(75, 81, 84), rgb(75, 85, 99), rgb(24, 51, 140))';
+      document
+        .querySelector('#root')
+        ?.setAttribute(
+          'style',
+          'background: conic-gradient(at right bottom, rgb(75, 81, 84), rgb(75, 85, 99), rgb(24, 51, 140))'
+        );
     } else if (color === '#185eea') {
-      document.body.style.background =
-        'conic-gradient(at right top, rgb(16, 118, 69), rgb(59, 130, 246), rgb(97, 17, 169))';
+      document
+        .querySelector('#root')
+        ?.setAttribute(
+          'style',
+          'background: conic-gradient(at right top, rgb(16, 118, 69), rgb(59, 130, 246), rgb(97, 17, 169))'
+        );
     } else if (color === '#3e2a7e') {
-      document.body.style.background =
-        'conic-gradient(at right bottom, rgb(50, 54, 57), rgb(63, 3, 124))';
+      document
+        .querySelector('#root')
+        ?.setAttribute(
+          'style',
+          'background: conic-gradient(at right bottom, rgb(50, 54, 57), rgb(63, 3, 124))'
+        );
     } else if (color === '#6780d1') {
-      document.body.style.background =
-        'conic-gradient(at right bottom, rgb(134, 7, 7), rgb(209, 213, 219), rgb(8, 68, 166))';
+      document
+        .querySelector('#root')
+        ?.setAttribute(
+          'style',
+          'background: conic-gradient(at right bottom, rgb(134, 7, 7), rgb(209, 213, 219), rgb(8, 68, 166))'
+        );
     } else if (color === '#7f2db6') {
-      document.body.style.background =
-        'conic-gradient(at right bottom, rgb(36, 39, 40), rgb(192, 132, 252), rgb(86, 26, 134))';
+      document
+        .querySelector('#root')
+        ?.setAttribute(
+          'style',
+          'background: conic-gradient(at right bottom, rgb(36, 39, 40), rgb(192, 132, 252), rgb(86, 26, 134))'
+        );
     }
   }, [color]);
 
@@ -62,9 +90,11 @@ export const GradientPicker = ({ display }: ComponentProps) => {
       if (!(colors[0] === e.hex)) {
         // remove and put at first index
         let newColorArray = colors;
-        const indexOfObject = newColorArray.findIndex((color: string) => {
-          return color === e.hex;
-        });
+        const indexOfObject = newColorArray.findIndex(
+          (color: string) => {
+            return color === e.hex;
+          }
+        );
         newColorArray.splice(indexOfObject, 1);
         newColorArray = [e.hex, ...newColorArray];
         setColors(newColorArray);

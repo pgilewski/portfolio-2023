@@ -3,8 +3,15 @@ import new_tab from '../assets/images/new_tab.png';
 import { Swiper, SwiperSlide } from 'swiper/react';
 
 import { Pagination, Navigation } from 'swiper';
+import { useWindowWidth } from '../hooks/useWindowWidth';
 
-const ItemContainer = ({ children, link }: { children: any; link: string }) => {
+const ItemContainer = ({
+  children,
+  link,
+}: {
+  children: any;
+  link: string;
+}) => {
   return (
     <div
       onClick={() => {
@@ -29,11 +36,12 @@ const Projects = (props: any) => {
       window.scrollTo(0, 0);
     }
   };
+  const width = useWindowWidth();
 
   return (
-    <div className=" h-full text-center shadow-strong mx-auto justify-center items-center md:max-w-screen-2xl relative top-0 w-full bg-navyDark mt-6 font-mono text-md p-8">
+    <div className="text-center h-screen overflow-hidden shadow-strong mx-auto justify-center items-center md:max-w-screen-2xl relative top-0 w-full bg-navyDark mt-6 font-mono text-md p-8">
       <Swiper
-        slidesPerView={3}
+        slidesPerView={width > 1000 ? 3 : 1}
         spaceBetween={30}
         slidesPerGroup={1}
         loop={true}
@@ -43,7 +51,7 @@ const Projects = (props: any) => {
         }}
         navigation={true}
         modules={[Pagination, Navigation]}
-        className="mySwiper py-12 xl:mt-40"
+        className="mySwiper py-12 lg:mt-16 xl:mt-24"
       >
         <SwiperSlide>
           {' '}
@@ -77,7 +85,6 @@ const Projects = (props: any) => {
         ) : null} */}
         </SwiperSlide>
         <SwiperSlide>
-          {' '}
           <ItemContainer
             link="#"
             //    onClick={() => handleModal('newtab')}
@@ -86,16 +93,7 @@ const Projects = (props: any) => {
           </ItemContainer>
         </SwiperSlide>
         <SwiperSlide>
-          <ItemContainer link="">.</ItemContainer>
-        </SwiperSlide>
-        <SwiperSlide>
-          <ItemContainer link="">.</ItemContainer>
-        </SwiperSlide>
-        <SwiperSlide>
-          <ItemContainer link="">.</ItemContainer>
-        </SwiperSlide>
-        <SwiperSlide>
-          <ItemContainer link="">.</ItemContainer>
+          <ItemContainer link="">[coming up]</ItemContainer>
         </SwiperSlide>
       </Swiper>
     </div>
