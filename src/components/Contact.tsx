@@ -95,7 +95,7 @@ const Contact = () => {
                 onChange={handleChange}
                 value={message.name}
                 name="name"
-                className="bg-navyLight py-2 px-2 border border-1 border-gray-800 rounded-sm my-2"
+                className="bg-navyLight text-black py-2 px-2 border border-1 border-gray-800 rounded-sm my-2"
                 type="text"
                 placeholder="Your Name"
               />
@@ -105,7 +105,7 @@ const Contact = () => {
                 onChange={handleChange}
                 value={message.email}
                 name="email"
-                className="bg-navyLight py-2 px-2 border border-1 border-gray-800 rounded-sm my-2"
+                className="bg-navyLight text-black py-2 px-2 border border-1 border-gray-800 rounded-sm my-2"
                 type="email"
                 placeholder="Email adress"
               />

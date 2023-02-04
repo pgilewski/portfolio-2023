@@ -56,7 +56,7 @@ const AboutMe: React.FC = () => {
     }
   };
   return (
-    <div className="text-center h-screen shadow-strong m-auto justify-center items-center center md:max-w-screen-lg xl:max-w-xxl w-full bg-navyDark mt-6 font-mono text-md p-8">
+    <div className="text-center h-screen min-h-min shadow-strong m-auto justify-center items-center center md:max-w-screen-lg xl:max-w-xxl w-full bg-navyDark mt-6 font-mono text-md p-8">
       <div className=" text-8xl w-full text-center mb-6 ">
         <span className="text-transparent bg-clip-text bg-gradient-to-tr from-cyan-400 to-sky-600 transition-colors font-bold">
           Przemek's
