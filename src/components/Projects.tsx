@@ -1,6 +1,6 @@
-import img_1 from '../assets/images/1.png';
-import img_2 from '../assets/images/2.png';
-import img_3 from '../assets/images/3.png';
+import img_1 from '../assets/images/storage1.png';
+import img_2 from '../assets/images/storage2.png';
+import img_3 from '../assets/images/storage3.png';
 import { Swiper, SwiperSlide } from 'swiper/react';
 
 import { Pagination, Navigation, FreeMode, Thumbs } from 'swiper';
@@ -141,8 +141,7 @@ const Projects = (props: any) => {
               className="px-2 py-1 bg-white/50 text-md text-black rounded-md border border-white mt-2 cursor-pointer hover:bg-white/75 transition-all"
               value="Go to repo"
               onClick={() => {
-                window.location.href =
-                  'https://github.com/pgilewski/ST0R4GE';
+                window.location.href = 'https://github.com/pgilewski/ST0R4GE';
                 return;
               }}
             />
